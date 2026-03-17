@@ -1,0 +1,172 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: url('img/baggrund.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Overskriften på vendespillet er stylet med lidt CSS3, repræsenteret ved 'rgb' og 'text-shadow' */
+h1 {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 45px;
+    color: #fff;
+}
+
+div#wrapper {
+    background-color: rgba(255, 230, 168, 0.85);
+    border: 2px #000 solid;
+    width: 700px;
+    height: max-content;
+    padding: 20px;
+    margin: auto;
+    border-radius: 5px;
+    text-align: center;
+}
+
+span {
+    font: normal 16px Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    padding-bottom: 10px;
+}
+
+span#pairsFound {
+    margin-right: 30px;
+}
+
+.grid {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+  }
+  
+.card {
+    position: relative;
+    -webkit-transition: all .4s linear;
+    -o-transition: all .4s linear;
+    transition: all .4s linear;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    margin: 5px;
+}
+
+.card,
+.back,
+.front {
+    height: 150px;
+    width: 150px;
+    border-radius: 8px;
+}
+  
+.back,
+.front {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1.5px solid black;
+}
+  
+.front {
+    background: url('img/vendespil.png') no-repeat center center;
+    background-size: cover;
+}
+
+.front:hover {
+    border: 2px solid rgb(180, 0, 0);
+}
+  
+.back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+  
+.selected {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+  
+.match .front {
+    opacity: 0.0 !important;
+}
+
+.back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+
+    background-size: contain;   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.kallekrabbe {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 375px;
+    animation: sideToSide 3s ease-in-out infinite;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+@keyframes sideToSide {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(30px); }
+    100% { transform: translateX(0); }
+}
+
+.kallekrabbe-boble {
+    position: fixed;
+    bottom: 255px;
+    left: 60px;
+
+    max-width: 400px;      
+    padding: 20px 35px;   
+
+    background: linear-gradient(to bottom, #bfe9ff, #7fd3ff);
+    color: #00334d;
+
+    border: 2px solid #4aa3d8;
+    border-radius: 20px;
+
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;     
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+.kallekrabbe-boble::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 30px;
+
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: #7fd3ff transparent transparent transparent;
+}
+
+.kallekrabbe-boble::before {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 28px;
+
+    border-width: 12px 12px 0 12px;
+    border-style: solid;
+    border-color: #4aa3d8 transparent transparent transparent;
+}

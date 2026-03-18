@@ -1,3 +1,4 @@
+/* COMMIT: Opretter grundstruktur for fiske vendespil */
 *,
 *::before,
 *::after {
@@ -5,6 +6,7 @@
     box-sizing: border-box;
 }
 
+/* COMMIT: Tilføjer havbaggrund til spillet */
 body {
     margin: 0;
     min-height: 100vh;
@@ -12,7 +14,7 @@ body {
     background-size: cover;
 }
 
-/* Overskriften på vendespillet er stylet med lidt CSS3, repræsenteret ved 'rgb' og 'text-shadow' */
+/* COMMIT: Forbedrer styling af overskrift */
 h1 {
     text-align: center;
     font-family: 'Quicksand', sans-serif;
@@ -20,6 +22,7 @@ h1 {
     color: #fff;
 }
 
+/* COMMIT: Forbedrer layout for info-sektion */
 div#wrapper {
     background-color: rgba(255, 230, 168, 0.85);
     border: 2px #000 solid;
@@ -31,38 +34,35 @@ div#wrapper {
     text-align: center;
 }
 
+/* COMMIT: Forbedrer layout for info-sektion */
 span {
     font: normal 16px Arial, Helvetica, sans-serif;
     color: rgb(0, 0, 0);
     padding-bottom: 10px;
 }
 
+/* COMMIT: Forbedrer layout for info-sektion */
 span#pairsFound {
     margin-right: 30px;
 }
 
+/* COMMIT: Opretter grundstruktur for fiske vendespil */
 .grid {
     margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
-  }
-  
+}
+
+/* COMMIT: Opretter grundstruktur for fiske vendespil */
 .card {
     position: relative;
-    -webkit-transition: all .4s linear;
-    -o-transition: all .4s linear;
     transition: all .4s linear;
-    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     margin: 5px;
 }
 
+/* COMMIT: Retter størrelse og visning af billeder på kortene */
 .card,
 .back,
 .front {
@@ -70,48 +70,53 @@ span#pairsFound {
     width: 150px;
     border-radius: 8px;
 }
-  
+
+/* COMMIT: Retter størrelse og visning af billeder på kortene */
 .back,
 .front {
     position: absolute;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border: 1.5px solid black;
 }
-  
+
+/* COMMIT: Tilføjer ny forside til kortene med havtema */
 .front {
     background: url('img/vendespil.png') no-repeat center center;
     background-size: cover;
 }
 
+/* COMMIT: Forbedrer brugeroplevelse med hover-effekt */
 .front:hover {
     border: 2px solid rgb(180, 0, 0);
 }
-  
+
+/* COMMIT: Opretter flip-effekt til kort */
 .back {
-    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
-  
+
+/* COMMIT: Opretter flip-effekt til kort */
 .selected {
-    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
-  
+
+/* COMMIT: Tilføjer match-effekt */
 .match .front {
     opacity: 0.0 !important;
 }
 
+/* COMMIT: Retter visning af billeder på bagsiden */
 .back {
-    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
-
-    background-size: contain;   
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     background-color: white;
 }
 
+/* COMMIT: Tilføjer Kalle Krabbe som figur i spillet */
+/* COMMIT: Justerer placering af Kalle Krabbe */
+/* COMMIT: Tilføjer klikfunktion til Kalle Krabbe */
 .kallekrabbe {
     position: fixed;
     bottom: 10px;
@@ -122,19 +127,23 @@ span#pairsFound {
     z-index: 1000;
 }
 
+/* COMMIT: Tilføjer animation til Kalle Krabbe */
 @keyframes sideToSide {
     0%   { transform: translateX(0); }
     50%  { transform: translateX(30px); }
     100% { transform: translateX(0); }
 }
 
+/* COMMIT: Tilføjer taleboble til Kalle Krabbe */
+/* COMMIT: Forbedrer design af taleboble */
+/* COMMIT: Justerer spacing i taleboble */
 .kallekrabbe-boble {
     position: fixed;
     bottom: 255px;
     left: 60px;
 
-    max-width: 400px;      
-    padding: 20px 35px;   
+    max-width: 400px;
+    padding: 20px 35px;
 
     background: linear-gradient(to bottom, #bfe9ff, #7fd3ff);
     color: #00334d;
@@ -143,12 +152,13 @@ span#pairsFound {
     border-radius: 20px;
 
     font-family: 'Quicksand', sans-serif;
-    font-size: 18px;     
+    font-size: 18px;
 
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     z-index: 999;
 }
 
+/* COMMIT: Tilføjer taleboble-pil */
 .kallekrabbe-boble::after {
     content: "";
     position: absolute;
@@ -160,6 +170,7 @@ span#pairsFound {
     border-color: #7fd3ff transparent transparent transparent;
 }
 
+/* COMMIT: Tilføjer kant til taleboble-pil */
 .kallekrabbe-boble::before {
     content: "";
     position: absolute;

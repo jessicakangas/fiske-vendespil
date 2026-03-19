@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
 
+    <!-- COMMIT: Tilføjer Google Font (Cherry Bomb One) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+
     <!-- COMMIT: Opdaterer titel og rydder op i HTML struktur -->
     <title>Fiske Vendespil</title>
 
@@ -14,22 +17,19 @@
 
 <body>
 
-    <!-- COMMIT: Opdaterer titel og rydder op i HTML struktur -->
-    <h1>Fiske Vendespil</h1>
+    <!-- COMMIT: Opdaterer titel og bruger Cherry Bomb One -->
+    <h1 class="cherry-font">Fiske Vendespil</h1>
 
-    <!-- COMMIT: Opretter grundstruktur for fiske vendespil -->
     <div id="wrapper">
 
         <!-- COMMIT: Tilføjer Kalle Krabbe som figur i spillet -->
-        <!-- COMMIT: Tilføjer alt-tekst til billeder for bedre tilgængelighed -->
         <img src="img/kallekrabbe.png" class="kallekrabbe" alt="Kalle Krabbe">
 
-        <!-- COMMIT: Tilføjer taleboble til Kalle Krabbe -->
-        <div class="kallekrabbe-boble">
+        <!-- COMMIT: Tilføjer taleboble med Cherry Bomb One -->
+        <div class="kallekrabbe-boble cherry-font">
             Pas på der ikke går fisk i den!
         </div>
 
-        <!-- COMMIT: Forbedrer layout for info-sektion -->
         <div class="info">
             <span>
                 <strong>Fundne par:</strong>
@@ -42,7 +42,6 @@
             </span>
         </div>
 
-        <!-- COMMIT: Opretter grundstruktur for fiske vendespil -->
         <div id="game"></div>
 
         <!-- COMMIT: Tilføjer baggrundsmusik til vendespillet -->
@@ -52,7 +51,6 @@
 
     </div>
 
-    <!-- COMMIT: Opretter grundstruktur for fiske vendespil -->
     <script src="memoryscript.js"></script>
 
 </body>

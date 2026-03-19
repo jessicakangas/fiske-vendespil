@@ -111,11 +111,12 @@ function resetGuesses() {
 
 // COMMIT: Opretter grundstruktur for fiske vendespil
 // COMMIT: Tilføjer win condition når alle fiskepar er fundet
-// COMMIT: Starter baggrundsmusik ved første brugerinteraktion
+
 // COMMIT: Stopper baggrundsmusik ved game over
 grid.addEventListener('click', function (event) {
   const clicked = event.target;
 
+  // COMMIT: Starter baggrundsmusik ved første brugerinteraktion
   if (!musikStartet) {
     baggrundsLyd.play();
     musikStartet = true;
